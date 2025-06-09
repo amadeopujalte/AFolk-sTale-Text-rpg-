@@ -36,7 +36,7 @@ private:
     	Item* equippedhead;
     	Item* equippedvest;
     	Item* equippedleg;
-    	int playergold;
+    	int playergold = 150;
 	bool rune;
 	int accuracy = 85;
 	int crit = 10;
@@ -127,7 +127,6 @@ public:
 	//Cleaner
 	//Destructor
 	~Player();
-	void resetplayer();
 	//Combat function
 	int playerBasicAttack(string weapon, Enemy* enemy);
 	bool checkhit();

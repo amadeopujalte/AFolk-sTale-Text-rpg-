@@ -104,37 +104,6 @@ using namespace std;
 			if(type == "head"){ equippedhead = armor;}	
 			else if(type == "vest"){equippedvest = armor;}
 			else{equippedleg = armor;}}
-void Player::resetplayer(){
-	//Reset the player1
-	playerloc = 11;
-	maxhp = 100;
-	maxmana = 100;
-	maxstamina = 100;
-	def = 0;
-	level = 0;
-	xp = 0;
-	playergold = 150;
-	hp = maxhp;
-	mana = maxmana;
-	stamina = maxstamina;
-	atk = 10;
-	weight = 0;
-	rune = false;
-	equippedweapon = nullptr;
-	equippedhead = nullptr;
-	equippedvest = nullptr;
-	equippedleg = nullptr;
-	for(int i; i < 5; i++){
-		availableskills[i] = nullptr;
-	}
-	for(int i; i < 10; i ++){
-		inventory[i] = nullptr;	
-			}
-	for(int i; i < 9; i++){
-		loccount[i] = 0;
-	}
-	
-}
 		//combat functions
 int Player::playerBasicAttack(string weapon, Enemy* enemy){
 	srand(time(0));
@@ -443,7 +412,7 @@ void Player::checkskills(){
 		Player::Player(int playerloc,int maxhp,int hp, int atk, int maxatk, int maxstamina, int stamina, int maxmana, int mana, int def, int maxdef, int weight, int xp,int gold)
 	: playerloc(playerloc), maxhp(maxhp), hp(hp), atk(atk), maxatk(maxatk), maxstamina(maxstamina),  stamina(stamina), maxmana(maxmana), mana(mana), def(def), maxdef(maxdef), weight(weight), xp(xp), playergold(gold){}
 		//default constructor
-		Player::Player(): playerloc(0), maxhp(100),hp(100),atk(0),maxstamina(100),stamina(100),maxmana(100),mana(100),def(0), maxdef(0),weight(0),xp(0),playergold(100){
+		Player::Player(): playerloc(0), maxhp(100),hp(100),atk(0),maxstamina(100),stamina(100),maxmana(100),mana(100),def(0), maxdef(0),weight(0),xp(0),playergold(150){
 			 for (int i = 0; i < 10; i++) {
             inventory[i] = nullptr;  // initialize each slot to null (empty)
 	}

@@ -532,7 +532,6 @@ void startgear(char role){
 void newgame(){
 	cout << "Starting new game..." << '\n';
 	string charactername;
-	player1.resetplayer();
 	cout << "Select your character name: " << '\n';
 	cin.ignore();
 	getline(cin,charactername);
