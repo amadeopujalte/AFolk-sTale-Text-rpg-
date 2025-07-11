@@ -322,7 +322,7 @@ void Player::checknewlevel(int &level, int &xp, int nextLevelXp){
 }
 
 void Player::checkskills(){
-	for(int i = 0; i < 6; i++){
+	for(int i = 0; i < 5; i++){
 		if(availableskills[i] != nullptr){
 			cout << "name: " << availableskills[i]->getSkillName() << '\n';
 			cout << "description: " << availableskills[i]->getSkillDesc() << '\n';
